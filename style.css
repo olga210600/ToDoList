@@ -1,0 +1,77 @@
+body{
+    background: url("img/andy-holmes-rCbdp8VCYhQ-unsplash.jpg");
+}
+
+.main-window-wrapper{
+    margin:50px  auto 0;
+    /*background: gray;*/
+    width: 700px;
+    /*margin-top: 50px;*/
+}
+
+.main-wrapper{
+    width: 600px;
+    margin: auto;
+}
+
+h1{
+    color: white;
+    margin:0 auto 25px;
+    width: 158px;
+    font-size: 35px;
+}
+
+.add-input-wrapper{
+    display: flex;
+    box-sizing: border-box;
+    width: 600px;
+    margin: auto;
+}
+
+#add-btn{
+    height: 40px;
+}
+
+#user-task{
+    width: 500px;
+    box-sizing: border-box;
+    height: 40px;
+}
+
+button{
+    height: 30px;
+    width: 100px;
+}
+
+.todo-item{
+    display: flex;
+}
+
+.description{
+    box-sizing: border-box;
+    width: 500px;
+    /*height: 50px;*/
+    background: white;
+    min-height: 40px;
+    margin-top: 20px;
+}
+
+.btn-delete{
+    width: 67px;
+    /*height: 40px;*/
+}
+
+.buttons{
+    width: 100px;
+    box-sizing: border-box;
+    margin: 20px auto 0;
+    padding-left: 9px;
+}
+
+/*.btn-complete{*/
+/*    width: 40px;*/
+/*}*/
+
+.todo-item.deletion {
+    animation: opacity 1s ease-in-out;
+}
