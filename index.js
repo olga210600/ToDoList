@@ -2,10 +2,10 @@ const addBtn = document.getElementById('add-btn');
 const deskTaskInput = document.getElementById('user-task');
 const todoWrapper = document.querySelector('.task-wrapper');
 
-fetch('https://jsonplaceholder.typicode.com/users')
-    .then(response => response.json())
-    .then(json => console.table(json))
-    .catch(error => console.error(error))
+// fetch('https://jsonplaceholder.typicode.com/users')
+//     .then(response => response.json())
+//     .then(json => console.table(json))
+//     .catch(error => console.error(error))
 
 let tasks = !localStorage.tasks ? [] : JSON.parse(localStorage.getItem('tasks'));
 
@@ -24,7 +24,6 @@ const fillHtmlList = () => {
         tasks.forEach((item, index) => {
             todoWrapper.innerHTML += createTemplate(item, index);
         });
-
         todoItems = document.querySelectorAll('.todo-item');
     }
 }
@@ -139,4 +138,18 @@ function createTemplate(task, index) {
         </div>
     `
 }
+
+// function getFromLocalStorage() {
+//     const reference = localStorage.getItem('todoItems');
+//     // if reference exists
+//     if (reference) {
+//         // converts back to array and store it in todos array
+//         todoItems = JSON.parse(reference);
+//         fillHtmlList(todoItems);
+//     }
+// }
+//
+// // initially get everything from localStorage
+// getFromLocalStorage();
+// console.log(getFromLocalStorage())
 

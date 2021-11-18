@@ -2,10 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale = 1.0">
+<!--    <meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale = 1.0">-->
     <title>Title</title>
+<!--    <link href="https://cdn.rawgit.com/mochajs/mocha/2.2.5/mocha.css" rel="stylesheet"/>-->
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
 <div class="main-window-wrapper">
@@ -14,11 +16,11 @@
         <div class="add-input-wrapper">
 
             <div class="input-wrapper">
-                <input type="text" id="user-task">
+                <input type="text" placeholder="Enter your assignment" id="user-task">
             </div>
 
             <div class="button-wrapper">
-                <button id="add-btn">Добавить</button>
+                <button id="add-btn">ADD</button>
             </div>
         </div>
 
@@ -32,6 +34,15 @@
     </div>
 </div>
 
+<div id="mocha"></div>
+<div id="messages"></div>
+<div id="fixtures"></div>
+<script src="https://cdn.rawgit.com/Automattic/expect.js/0.3.1/index.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Faker/2.2.2/faker.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/8.0.1/mocha.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chai/1.4.1/chai.js"></script>
 <script src="index.js"></script>
+<script>mocha.setup('bdd')</script>
+<script src="tests/index.spec.js"></script>
 </body>
 </html>

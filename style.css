@@ -1,5 +1,6 @@
 body{
     background: url("img/andy-holmes-rCbdp8VCYhQ-unsplash.jpg");
+    font-family: sans-serif;
 }
 
 .main-window-wrapper{
@@ -15,7 +16,7 @@ body{
 h1{
     color: white;
     margin:0 auto 25px;
-    width: 158px;
+    width: 170px;
     font-size: 35px;
 }
 
@@ -28,7 +29,13 @@ h1{
 
 #add-btn{
     height: 40px;
+    width: 94px;
     border-radius: 7px;
+    background: #5dd43f;
+    border: none;
+    color: white;
+    font-weight: bold;
+    margin-left: 5px;
 }
 
 #user-task{
@@ -36,6 +43,8 @@ h1{
     box-sizing: border-box;
     height: 40px;
     border-radius: 7px;
+    border: none;
+    padding-left: 20px;
 }
 
 button{
@@ -45,10 +54,12 @@ button{
 }
 
 .todo-item{
-    width: 100%;
+    width: 500px;
     background: #ffffff;
     height: 40px;
     border-radius: 7px;
+    box-sizing: border-box;
+    padding: 10px 0 0 20px;
 }
 
 .description{
@@ -68,11 +79,21 @@ button{
 }
 
 .btn-delete{
-    width: 43px;
-    height: 43px;
+    width: 45px;
+    height: 40px;
     border-radius: 7px;
     margin-top: -1px;
+    background: #fc6a6a;
+    border: none;
 
+}
+
+.btn-delete:hover{
+    background: #9c2828;
+}
+
+.btn-delete:active{
+    background: white;
 }
 
 .btn-complete{
@@ -98,4 +119,21 @@ button{
 
 .checked {
     text-decoration: line-through;
+}
+
+.btn-edit{
+    width: 45px;
+    height: 40px;
+    border-radius: 7px;
+    background: #fffb8a;
+    border: none;
+    margin-left: 5px;
+}
+
+.btn-edit:hover{
+    background: #e3dd20;
+}.
+
+ btn-edit:active{
+    background: white;
 }
