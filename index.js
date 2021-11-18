@@ -124,10 +124,6 @@ const getPaint = () => {
 }
 const addition = document.getElementById('btn-addition-second');
 
-// addition.addEventListener('click', () => {
-//
-//     getPaint()
-// })
 
 
 console.log(getData())
@@ -143,51 +139,4 @@ function createTemplate(task, index) {
         </div>
     `
 }
-//
-// const input = document.getElementById('input-text');
-// const button = document.getElementById('btn-push');
-// const section = document.querySelector('.section');
-// const plans_out = document.querySelector('.plans-out');
-// const list = document.querySelector('.list');
-// const delete_button = document.qetElementsByClassName('btn-delete-li');
-// const button_delete = document.qetElementsByClassName('delete-btn');
-// const JSON_PLACEHOLDER_TO_DO = 'https://jsonplaceholder.typicode.com/todos?_limit=15';
-// const JSON_PLACEHOLDER_DELETE_TO_DO = 'https://jsonplaceholder.typicode.com/todos/';
-// consttodosarray = [];
-//
-// function addPlans( ){
-//     if(!input.value)return;
-//     do {
-//         let div = document.createElement('div');
-//         let newInputValue = document.createElement('li');
-//         let newInputCheck = document.createElement('input');
-//         let buttonDelete = document.createElement('button');
-//         div.className = input.value + ' ' + 'container-li';
-//         newInputCheck.type = 'checkbox';
-//         newInputValue.textContent = input.value;
-//         buttonDelete.id = input.value + ' ' + 'btn-delete-li';
-//         buttonDelete.className = 'btn-delete-li'
-//         buttonDelete.textContent = 'Delete'
-//         list.prepend(div)
-//         div.prepend(newInputValue, newInputCheck, buttonDelete)
-//         localStorage.setItem(`plans-${input.value}`, input.value)
-//         input.value = ''
-//     }while (input.value);
-// }
-// for(const item of delete_button){
-//     item.addEventListener('click', deleteInputPlans);
-// }
-//
-// function deleteInputPlans(){
-//     this.parentElement.remove();
-//     console.log()
-// }
-//
-// window.addEventListener('load', () =>{
-//     getPlans(JSON_PLACEHOLDER_TO_DO);
-//     localStorage.clear()
-// });
-//
-// button.addEventListener('click', addPlans);
-//
 
