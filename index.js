@@ -2,10 +2,7 @@ const addBtn = document.getElementById('add-btn');
 const deskTaskInput = document.getElementById('user-task');
 const todoWrapper = document.querySelector('.task-wrapper');
 
-// fetch('https://jsonplaceholder.typicode.com/users')
-//     .then(response => response.json())
-//     .then(json => console.table(json))
-//     .catch(error => console.error(error))
+
 
 let tasks = !localStorage.tasks ? [] : JSON.parse(localStorage.getItem('tasks'));
 
@@ -15,6 +12,17 @@ function Task(description) {
     this.description = description;
     this.completed = false;
     this.isEdit = false;
+}
+const createTemplate = (task, index) => {
+    return `
+        <div class="todo-item ${task.completed ? 'checked' : ''}">
+            <div class="description">${task.description}</div>
+            <div class="buttons">
+                <input onclick="completeTask(${index})" class="btn-complete" type="checkbox" ${task.completed ? 'checked' : ''} >
+                <button onclick="deleteTask(${index})" class="btn-delete">Delete</button>
+            </div>
+        </div>
+    `
 }
 
 const fillHtmlList = () => {
@@ -27,6 +35,7 @@ const fillHtmlList = () => {
         todoItems = document.querySelectorAll('.todo-item');
     }
 }
+fillHtmlList()
 
 const updateLocal = () => {
     localStorage.setItem('tasks', JSON.stringify(tasks));
@@ -86,35 +95,35 @@ const editTask = index => {
 
 let array = [];
 
-function getData() {
-
-    fetch("https://jsonplaceholder.typicode.com/todos?_limit=15")
-        .then(
-            function (response) {
-                if (response.status !== 200) {
-                    console.log("You so bad!" + response.status);
-                    return;
-                }
-
-                response.json().then(function (data) {
-                    //console.log(data);
-                    getDataToArray(data);
-                });
-            }
-        )
-        .catch(function (err) {
-            console.log("fetch Error : -S", err);
-        });
-}
-
-function getDataToArray(data) {
-    for (let i = 0; i < 15; i++) {
-        array[i] = data[i];
-    }
-    console.log(array);
-
-
-}
+// function getData() {
+//
+//     fetch("https://jsonplaceholder.typicode.com/todos?_limit=15")
+//         .then(
+//             function (response) {
+//                 if (response.status !== 200) {
+//                     console.log("You so bad!" + response.status);
+//                     return;
+//                 }
+//
+//                 response.json().then(function (data) {
+//                     //console.log(data);
+//                     getDataToArray(data);
+//                 });
+//             }
+//         )
+//         .catch(function (err) {
+//             console.log("fetch Error : -S", err);
+//         });
+// }
+//
+// function getDataToArray(data) {
+//     for (let i = 0; i < 15; i++) {
+//         array[i] = data[i];
+//     }
+//     console.log(array);
+//
+//
+// }
 
 const getPaint = () => {
     for (let i = 0; i < array.length; i++) {
