@@ -2,8 +2,6 @@ const addBtn = document.getElementById('add-btn');
 const deskTaskInput = document.getElementById('user-task');
 const todoWrapper = document.querySelector('.task-wrapper');
 
-
-
 let tasks = !localStorage.tasks ? [] : JSON.parse(localStorage.getItem('tasks'));
 
 let todoItems = [];
@@ -12,17 +10,6 @@ function Task(description) {
     this.description = description;
     this.completed = false;
     this.isEdit = false;
-}
-const createTemplate = (task, index) => {
-    return `
-        <div class="todo-item ${task.completed ? 'checked' : ''}">
-            <div class="description">${task.description}</div>
-            <div class="buttons">
-                <input onclick="completeTask(${index})" class="btn-complete" type="checkbox" ${task.completed ? 'checked' : ''} >
-                <button onclick="deleteTask(${index})" class="btn-delete">Delete</button>
-            </div>
-        </div>
-    `
 }
 
 const fillHtmlList = () => {
@@ -66,7 +53,7 @@ addBtn.addEventListener('click', () => {
             }
 
             return acc;
-        }, { task: {}, index: null });
+        }, {task: {}, index: null});
 
         if (editableTask.index === null) {
             tasks.push(new Task(deskTaskInput.value));
@@ -93,49 +80,6 @@ const editTask = index => {
     tasks[index].isEdit = !tasks[index].isEdit;
 }
 
-let array = [];
-
-// function getData() {
-//
-//     fetch("https://jsonplaceholder.typicode.com/todos?_limit=15")
-//         .then(
-//             function (response) {
-//                 if (response.status !== 200) {
-//                     console.log("You so bad!" + response.status);
-//                     return;
-//                 }
-//
-//                 response.json().then(function (data) {
-//                     //console.log(data);
-//                     getDataToArray(data);
-//                 });
-//             }
-//         )
-//         .catch(function (err) {
-//             console.log("fetch Error : -S", err);
-//         });
-// }
-//
-// function getDataToArray(data) {
-//     for (let i = 0; i < 15; i++) {
-//         array[i] = data[i];
-//     }
-//     console.log(array);
-//
-//
-// }
-
-const getPaint = () => {
-    for (let i = 0; i < array.length; i++) {
-        document.getElementById('show-task').innerHTML += array[i].title + '<p>';
-    }
-}
-const addition = document.getElementById('btn-addition-second');
-
-
-
-console.log(getData())
-
 function createTemplate(task, index) {
     return `
         <div class="description">
@@ -147,18 +91,3 @@ function createTemplate(task, index) {
         </div>
     `
 }
-
-// function getFromLocalStorage() {
-//     const reference = localStorage.getItem('todoItems');
-//     // if reference exists
-//     if (reference) {
-//         // converts back to array and store it in todos array
-//         todoItems = JSON.parse(reference);
-//         fillHtmlList(todoItems);
-//     }
-// }
-//
-// // initially get everything from localStorage
-// getFromLocalStorage();
-// console.log(getFromLocalStorage())
-

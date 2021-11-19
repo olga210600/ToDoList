@@ -1,33 +1,33 @@
-body{
+body {
     background: url("img/andy-holmes-rCbdp8VCYhQ-unsplash.jpg");
     font-family: sans-serif;
 }
 
-.main-window-wrapper{
-    margin:50px  auto 0;
+.main-window-wrapper {
+    margin: 50px auto 0;
     width: 700px;
 }
 
-.main-wrapper{
+.main-wrapper {
     width: 600px;
     margin: auto;
 }
 
-h1{
+h1 {
     color: white;
-    margin:0 auto 25px;
+    margin: 0 auto 25px;
     width: 170px;
     font-size: 35px;
 }
 
-.add-input-wrapper{
+.add-input-wrapper {
     display: flex;
     box-sizing: border-box;
     width: 600px;
     margin: auto;
 }
 
-#add-btn{
+#add-btn {
     height: 40px;
     width: 94px;
     border-radius: 7px;
@@ -38,7 +38,16 @@ h1{
     margin-left: 5px;
 }
 
-#user-task{
+#add-btn:hover {
+    background: #3eab22;
+}
+
+#add-btn:active {
+    background: white;
+    color: #3eab22;
+}
+
+#user-task {
     width: 500px;
     box-sizing: border-box;
     height: 40px;
@@ -47,13 +56,13 @@ h1{
     padding-left: 20px;
 }
 
-button{
+button {
     height: 30px;
     width: 100px;
 
 }
 
-.todo-item{
+.todo-item {
     width: 500px;
     background: #ffffff;
     height: 40px;
@@ -62,23 +71,13 @@ button{
     padding: 10px 0 0 20px;
 }
 
-.description{
-    /*box-sizing: border-box;*/
-    /*!*width: 500px;*!*/
-    /*background: white;*/
-    /*min-height: 40px;*/
-    /*margin-top: 20px;*/
-    /*word-wrap: break-word;*/
-    /*padding: 13px 0 0 10px;*/
-    /*border-radius: 7px;*/
-    /*cursor: pointer;*/
-    /*height: 40px;*/
+.description {
     width: 100%;
     display: flex;
     margin-top: 15px;
 }
 
-.btn-delete{
+.btn-delete {
     width: 45px;
     height: 40px;
     border-radius: 7px;
@@ -88,20 +87,20 @@ button{
 
 }
 
-.btn-delete:hover{
+.btn-delete:hover {
     background: #9c2828;
 }
 
-.btn-delete:active{
+.btn-delete:active {
     background: white;
 }
 
-.btn-complete{
+.btn-complete {
     transform: scale(3.5);
     margin: 0;
 }
 
-.buttons{
+.buttons {
     width: 100px;
     height: 40px;
     display: flex;
@@ -113,7 +112,7 @@ button{
     animation: opacity 1s ease-in-out;
 }
 
-#show-task{
+#show-task {
     color: white;
 }
 
@@ -121,7 +120,7 @@ button{
     text-decoration: line-through;
 }
 
-.btn-edit{
+.btn-edit {
     width: 45px;
     height: 40px;
     border-radius: 7px;
@@ -130,10 +129,11 @@ button{
     margin-left: 5px;
 }
 
-.btn-edit:hover{
+.btn-edit:hover {
     background: #e3dd20;
-}.
+}
 
- btn-edit:active{
+.
+btn-edit:active {
     background: white;
 }
