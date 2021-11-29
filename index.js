@@ -68,7 +68,6 @@ addBtn.addEventListener('click', () => {
 })
 
 const deleteTask = index => {
-    console.log('1111111111111111111111111111111111111')
 
     todoItems[index].classList.add('deletion');
 
@@ -78,7 +77,6 @@ const deleteTask = index => {
 }
 
 const editTask = index => {
-    console.log('1111111111111111111111111111111111111')
     deskTaskInput.value = todoItems[index].innerHTML;
     tasks[index].isEdit = !tasks[index].isEdit;
 }
